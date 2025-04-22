@@ -1,0 +1,689 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit a Bit - Descargas de Juegos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/Bit_a_Bit_logo_no_background.png" alt="Bit a Bit Logo" class="main-logo">
+                <p class="tagline">Tu portal premium de descargas de juegos</p>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="#inicio" class="active menu-link" data-section="inicio">Inicio</a></li>
+                    <li class="has-submenu">
+                        <a href="#categorias" class="menu-link" data-section="categorias">Categorías <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#categorias-accion" data-filter="action">Acción</a></li>
+                            <li><a href="#categorias-aventura" data-filter="adventure">Aventura</a></li>
+                            <li><a href="#categorias-rpg" data-filter="rpg">RPG</a></li>
+                            <li><a href="#categorias-estrategia" data-filter="strategy">Estrategia</a></li>
+                            <li><a href="#categorias-deportes" data-filter="sports">Deportes</a></li>
+                            <li><a href="#categorias-simulacion" data-filter="simulation">Simulación</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#novedades" class="menu-link" data-section="novedades">Novedades</a></li>
+                    <li><a href="#top-descargas" class="menu-link" data-section="top-descargas">Top Descargas</a></li>
+                    <li><a href="#sugerencias" class="menu-link" data-section="sugerencias">Sugerencias</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar juegos...">
+                <button><i class="fas fa-search"></i></button>
+                <div class="search-results" id="search-results">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Inicio Section -->
+    <section id="inicio" class="section-content active">
+        <div class="hero-slider">
+            <div class="slider-container">
+                <div class="slide active">
+                    <div class="slide-content">
+                        <h2>Schedule I</h2>
+                        <p>Organiza tu vida digital con esta potente herramienta de gestión de tiempo</p>
+                        <a href="game.html?id=schedule" class="btn-download">Ver Juego</a>
+                    </div>
+                    <div class="slide-bg" id="slide-bg-1"></div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Grand Theft Auto IV</h2>
+                        <p>Explora Liberty City en esta épica aventura criminal</p>
+                        <a href="game.html?id=gta4" class="btn-download">Ver Juego</a>
+                    </div>
+                    <div class="slide-bg" id="slide-bg-2"></div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Dark Souls</h2>
+                        <p>Prepárate para morir una y otra vez</p>
+                        <a href="game.html?id=darksouls" class="btn-download">Ver Juego</a>
+                    </div>
+                    <div class="slide-bg" id="slide-bg-3"></div>
+                </div>
+                <div class="slider-controls">
+                    <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slide-indicators">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                    </div>
+                    <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <section class="featured-games">
+            <div class="container">
+                <h2 class="section-title">Juegos Destacados</h2>
+                <div class="games-grid">
+                    <div class="game-card" data-category="simulation strategy">
+                        <div class="game-thumb" id="game-thumb-schedule"></div>
+                        <div class="game-info">
+                            <h3>Schedule</h3>
+                            <div class="game-meta">
+                                <span class="category">Simulación, Estrategia</span>
+                                <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            </div>
+                            <a href="game.html?id=schedule" class="btn-download">Descargar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card" data-category="action adventure">
+                        <div class="game-thumb" id="game-thumb-gta4"></div>
+                        <div class="game-info">
+                            <h3>Grand Theft Auto IV</h3>
+                            <div class="game-meta">
+                                <span class="category">Acción, Aventura</span>
+                                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <a href="game.html?id=gta4" class="btn-download">Descargar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card" data-category="action">
+                        <div class="game-thumb" id="game-thumb-partyanimals"></div>
+                        <div class="game-info">
+                            <h3>Party Animals</h3>
+                            <div class="game-meta">
+                                <span class="category">Acción, Multijugador</span>
+                                <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                            <a href="game.html?id=partyanimals" class="btn-download">Descargar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card" data-category="action">
+                        <div class="game-thumb" id="game-thumb-halo2"></div>
+                        <div class="game-info">
+                            <h3>Halo 2 Online Multiplayer</h3>
+                            <div class="game-meta">
+                                <span class="category">Acción, Shooter</span>
+                                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <a href="game.html?id=halo2" class="btn-download">Descargar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card" data-category="action">
+                        <div class="game-thumb" id="game-thumb-modernwarfare2"></div>
+                        <div class="game-info">
+                            <h3>Modern Warfare 2</h3>
+                            <div class="game-meta">
+                                <span class="category">Acción, Shooter</span>
+                                <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                            <a href="game.html?id=modernwarfare2" class="btn-download">Descargar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card" data-category="action">
+                        <div class="game-thumb" id="game-thumb-manhunt2"></div>
+                        <div class="game-info">
+                            <h3>Manhunt 2</h3>
+                            <div class="game-meta">
+                                <span class="category">Acción, Terror</span>
+                                <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                            </div>
+                            <a href="game.html?id=manhunt2" class="btn-download">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="load-more">
+                    <button class="btn-load-more">Cargar más juegos</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-updates">
+            <div class="container">
+                <h2 class="section-title">Últimas Actualizaciones</h2>
+                <div class="updates-grid">
+                    <div class="update-card">
+                        <div class="update-date">28 ABR 2025</div>
+                        <h3>Dark Souls: Remastered añadido</h3>
+                        <p>Hemos agregado Dark Souls: Remastered a nuestra biblioteca con gráficos mejorados, rendimiento optimizado y todos los DLCs incluidos. Prepárate para morir... otra vez.</p>
+                        <a href="game.html?id=darksouls" class="read-more">Ver juego</a>
+                    </div>
+                    <div class="update-card">
+                        <div class="update-date">25 ABR 2025</div>
+                        <h3>Schedule I - Actualización v0.5.2</h3>
+                        <p>La última actualización para Schedule incluye un nuevo modo multijugador, interfaz rediseñada y compatibilidad con dispositivos móviles a través de sincronización en la nube.</p>
+                        <a href="game.html?id=schedule" class="read-more">Leer más</a>
+                    </div>
+                    <div class="update-card">
+                        <div class="update-date">20 ABR 2025</div>
+                        <h3>Mantenimiento programado completado</h3>
+                        <p>Hemos finalizado el mantenimiento para mejorar la velocidad de descargas. Los usuarios deberían experimentar un 50% más de velocidad y menor tiempo de espera.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Categorías Section -->
+    <section id="categorias" class="section-content">
+        <div class="container">
+            <div class="section-header">
+                <img src="/Categorias_no_background.png" alt="Categorías" class="section-logo">
+            </div>
+            <div class="category-filters">
+                <button class="category-btn active" data-filter="all">Todos</button>
+                <button class="category-btn" data-filter="action">Acción</button>
+                <button class="category-btn" data-filter="adventure">Aventura</button>
+                <button class="category-btn" data-filter="rpg">RPG</button>
+                <button class="category-btn" data-filter="strategy">Estrategia</button>
+                <button class="category-btn" data-filter="sports">Deportes</button>
+                <button class="category-btn" data-filter="simulation">Simulación</button>
+            </div>
+            <div class="category-sort">
+                <label for="sort-by">Ordenar por:</label>
+                <select id="sort-by">
+                    <option value="recent">Más recientes</option>
+                    <option value="popular">Más populares</option>
+                    <option value="az">A-Z</option>
+                </select>
+            </div>
+            <div class="quick-filters">
+                <span class="filter-label">Filtros rápidos:</span>
+                <div class="tag-filters">
+                    <button class="tag-filter" data-tag="multijugador">Multijugador</button>
+                    <button class="tag-filter" data-tag="mundo-abierto">Mundo Abierto</button>
+                    <button class="tag-filter" data-tag="español">Español</button>
+                    <button class="tag-filter" data-tag="offline">Jugar Offline</button>
+                    <button class="tag-filter" data-tag="cooperativo">Cooperativo</button>
+                </div>
+            </div>
+            <div class="games-grid" id="category-games">
+                <!-- Schedule -->
+                <div class="game-card" data-category="simulation strategy" data-tags="español offline">
+                    <div class="game-thumb" id="game-thumb-schedule"></div>
+                    <div class="game-info">
+                        <h3>Schedule</h3>
+                        <div class="game-meta">
+                            <span class="category">Simulación, Estrategia</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                        <a href="game.html?id=schedule" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Party Animals -->
+                <div class="game-card" data-category="action" data-tags="multijugador español">
+                    <div class="game-thumb" id="game-thumb-partyanimals"></div>
+                    <div class="game-info">
+                        <h3>Party Animals</h3>
+                        <div class="game-meta">
+                            <span class="category">Acción, Multijugador</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <a href="game.html?id=partyanimals" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Little Nightmares -->
+                <div class="game-card" data-category="adventure" data-tags="español offline">
+                    <div class="game-thumb" id="game-thumb-littlenightmares"></div>
+                    <div class="game-info">
+                        <h3>Little Nightmares</h3>
+                        <div class="game-meta">
+                            <span class="category">Aventura, Terror</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <a href="game.html?id=littlenightmares" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Halo 2 Online Multiplayer -->
+                <div class="game-card" data-category="action" data-tags="multijugador español">
+                    <div class="game-thumb" id="game-thumb-halo2"></div>
+                    <div class="game-info">
+                        <h3>Halo 2 Online Multiplayer</h3>
+                        <div class="game-meta">
+                            <span class="category">Acción, Shooter</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <a href="game.html?id=halo2" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Manhunt 2 -->
+                <div class="game-card" data-category="action" data-tags="español offline">
+                    <div class="game-thumb" id="game-thumb-manhunt2"></div>
+                    <div class="game-info">
+                        <h3>Manhunt 2</h3>
+                        <div class="game-meta">
+                            <span class="category">Acción, Terror</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                        </div>
+                        <a href="game.html?id=manhunt2" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- The Last of Us -->
+                <div class="game-card" data-category="action adventure" data-tags="mundo-abierto español offline">
+                    <div class="game-thumb" id="game-thumb-lastofus"></div>
+                    <div class="game-info">
+                        <h3>The Last of Us</h3>
+                        <div class="game-meta">
+                            <span class="category">Acción, Aventura</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <a href="game.html?id=lastofus" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Modern Warfare 2 -->
+                <div class="game-card" data-category="action" data-tags="multijugador español">
+                    <div class="game-thumb" id="game-thumb-modernwarfare2"></div>
+                    <div class="game-info">
+                        <h3>Modern Warfare 2</h3>
+                        <div class="game-meta">
+                            <span class="category">Acción, Shooter</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <a href="game.html?id=modernwarfare2" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- The Forest -->
+                <div class="game-card" data-category="action" data-tags="mundo-abierto español cooperativo">
+                    <div class="game-thumb" id="game-thumb-theforest"></div>
+                    <div class="game-info">
+                        <h3>The Forest</h3>
+                        <div class="game-meta">
+                            <span class="category">Acción, Supervivencia</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                        <a href="game.html?id=theforest" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Dark Souls -->
+                <div class="game-card" data-category="action rpg" data-tags="español offline">
+                    <div class="game-thumb" id="game-thumb-darksouls"></div>
+                    <div class="game-info">
+                        <h3>Dark Souls</h3>
+                        <div class="game-meta">
+                            <span class="category">Acción, RPG</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <a href="game.html?id=darksouls" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Prototype -->
+                <div class="game-card" data-category="action" data-tags="mundo-abierto offline">
+                    <div class="game-thumb" id="game-thumb-prototype"></div>
+                    <div class="game-info">
+                        <h3>Prototype</h3>
+                        <div class="game-meta">
+                            <span class="category">Acción</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                        </div>
+                        <a href="game.html?id=prototype" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Naruto Storm -->
+                <div class="game-card" data-category="action" data-tags="multijugador español">
+                    <div class="game-thumb" id="game-thumb-narutostorm"></div>
+                    <div class="game-info">
+                        <h3>Naruto Storm</h3>
+                        <div class="game-meta">
+                            <span class="category">Acción, Lucha</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <a href="game.html?id=narutostorm" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- PES 6 -->
+                <div class="game-card" data-category="action sports" data-tags="multijugador español">
+                    <div class="game-thumb" id="game-thumb-pes6"></div>
+                    <div class="game-info">
+                        <h3>PES 6 Evolution Soccer</h3>
+                        <div class="game-meta">
+                            <span class="category">Deportes, Acción</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                        <a href="game.html?id=pes6" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Lego Jurassic World -->
+                <div class="game-card" data-category="adventure" data-tags="español offline">
+                    <div class="game-thumb" id="game-thumb-legojurassic"></div>
+                    <div class="game-info">
+                        <h3>Lego Jurassic World</h3>
+                        <div class="game-meta">
+                            <span class="category">Aventura, Familiar</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                        <a href="game.html?id=legojurassic" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Blasphemous -->
+                <div class="game-card" data-category="adventure" data-tags="español offline">
+                    <div class="game-thumb" id="game-thumb-blasphemous"></div>
+                    <div class="game-info">
+                        <h3>Blasphemous</h3>
+                        <div class="game-meta">
+                            <span class="category">Aventura, Plataformas</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <a href="game.html?id=blasphemous" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Rayman Origins -->
+                <div class="game-card" data-category="adventure" data-tags="español offline">
+                    <div class="game-thumb" id="game-thumb-raymanorigins"></div>
+                    <div class="game-info">
+                        <h3>Rayman Origins</h3>
+                        <div class="game-meta">
+                            <span class="category">Aventura, Plataformas</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <a href="game.html?id=raymanorigins" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- South Park: The Stick of Truth -->
+                <div class="game-card" data-category="adventure rpg" data-tags="español offline">
+                    <div class="game-thumb" id="game-thumb-southpark"></div>
+                    <div class="game-info">
+                        <h3>South Park: The Stick of Truth</h3>
+                        <div class="game-meta">
+                            <span class="category">Aventura, RPG</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                        </div>
+                        <a href="game.html?id=southpark" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+                
+                <!-- Saints Row 2 -->
+                <div class="game-card" data-category="adventure action" data-tags="mundo-abierto español">
+                    <div class="game-thumb" id="game-thumb-saintsrow2"></div>
+                    <div class="game-info">
+                        <h3>Saints Row 2</h3>
+                        <div class="game-meta">
+                            <span class="category">Aventura, Acción</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.4</span>
+                        </div>
+                        <a href="game.html?id=saintsrow2" class="btn-download">Descargar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Novedades Section -->
+    <section id="novedades" class="section-content">
+        <div class="container">
+            <h2 class="section-title">Novedades y Lanzamientos</h2>
+            <div class="news-filters">
+                <button class="news-filter active" data-filter="all">Todos</button>
+                <button class="news-filter" data-filter="releases">Lanzamientos</button>
+                <button class="news-filter" data-filter="updates">Actualizaciones</button>
+                <button class="news-filter" data-filter="upcoming">Próximamente</button>
+            </div>
+            <div class="news-grid">
+                <div class="news-card" data-type="releases">
+                    <div class="news-date">24 ABR 2025</div>
+                    <div class="news-thumb" style="background: linear-gradient(to bottom, #3a0ca3, #f72585);"></div>
+                    <div class="news-content">
+                        <h3>20 nuevos juegos de acción añadidos</h3>
+                        <p>Hemos añadido una gran colección de juegos de acción, incluyendo títulos como The Last of Us y Dark Souls.</p>
+                        <span class="news-tags">
+                            <span class="news-tag">Acción</span>
+                            <span class="news-tag">Lanzamiento</span>
+                        </span>
+                        <a href="#categorias" class="read-more">Ver juegos</a>
+                    </div>
+                </div>
+                <div class="news-card" data-type="updates">
+                    <div class="news-date">15 ABR 2025</div>
+                    <div class="news-thumb" style="background: linear-gradient(to bottom, #4d908e, #457b9d);"></div>
+                    <div class="news-content">
+                        <h3>Schedule I - Actualización v0.3.4</h3>
+                        <p>Nueva actualización con mejoras de rendimiento, corrección de bugs y nuevas funcionalidades.</p>
+                        <span class="news-tags">
+                            <span class="news-tag">Simulación</span>
+                            <span class="news-tag">Actualización</span>
+                        </span>
+                        <a href="game.html?id=schedule" class="read-more">Leer más</a>
+                    </div>
+                </div>
+                <div class="news-card" data-type="upcoming">
+                    <div class="news-date">30 ABR 2025</div>
+                    <div class="news-thumb" style="background: linear-gradient(to bottom, #f77f00, #d62828);"></div>
+                    <div class="news-content">
+                        <h3>Próximamente: Categoría RPG</h3>
+                        <p>Estamos trabajando para añadir una gran selección de juegos RPG a nuestra biblioteca.</p>
+                        <span class="news-tags">
+                            <span class="news-tag">RPG</span>
+                            <span class="news-tag">Próximamente</span>
+                        </span>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Descargas Section -->
+    <section id="top-descargas" class="section-content">
+        <div class="container">
+            <h2 class="section-title">Top Descargas</h2>
+            <div class="time-filters">
+                <button class="time-filter active" data-time="week">Esta semana</button>
+                <button class="time-filter" data-time="month">Este mes</button>
+                <button class="time-filter" data-time="year">Este año</button>
+                <button class="time-filter" data-time="all">De todos los tiempos</button>
+            </div>
+            <div class="top-games-list">
+                <div class="top-game" data-time="week month year all">
+                    <div class="ranking">1</div>
+                    <div class="top-game-thumb" id="top-game-thumb-lastofus"></div>
+                    <div class="top-game-info">
+                        <h3>The Last of Us</h3>
+                        <div class="top-game-meta">
+                            <span class="top-game-category">Acción, Aventura</span>
+                            <span class="downloads-count"><i class="fas fa-download"></i> 15,432</span>
+                        </div>
+                    </div>
+                    <a href="game.html?id=lastofus" class="btn-download">Descargar</a>
+                </div>
+                <div class="top-game" data-time="week month year all">
+                    <div class="ranking">2</div>
+                    <div class="top-game-thumb" id="top-game-thumb-darksouls"></div>
+                    <div class="top-game-info">
+                        <h3>Dark Souls</h3>
+                        <div class="top-game-meta">
+                            <span class="top-game-category">Acción, RPG</span>
+                            <span class="downloads-count"><i class="fas fa-download"></i> 14,865</span>
+                        </div>
+                    </div>
+                    <a href="game.html?id=darksouls" class="btn-download">Descargar</a>
+                </div>
+                <div class="top-game" data-time="week month year all">
+                    <div class="ranking">3</div>
+                    <div class="top-game-thumb" id="top-game-thumb-theforest"></div>
+                    <div class="top-game-info">
+                        <h3>The Forest</h3>
+                        <div class="top-game-meta">
+                            <span class="top-game-category">Acción, Supervivencia</span>
+                            <span class="downloads-count"><i class="fas fa-download"></i> 13,291</span>
+                        </div>
+                    </div>
+                    <a href="game.html?id=theforest" class="btn-download">Descargar</a>
+                </div>
+                <div class="top-game" data-time="month year all">
+                    <div class="ranking">4</div>
+                    <div class="top-game-thumb" id="top-game-thumb-modernwarfare2"></div>
+                    <div class="top-game-info">
+                        <h3>Modern Warfare 2</h3>
+                        <div class="top-game-meta">
+                            <span class="top-game-category">Acción, Shooter</span>
+                            <span class="downloads-count"><i class="fas fa-download"></i> 12,874</span>
+                        </div>
+                    </div>
+                    <a href="game.html?id=modernwarfare2" class="btn-download">Descargar</a>
+                </div>
+                <div class="top-game" data-time="month year all">
+                    <div class="ranking">5</div>
+                    <div class="top-game-thumb" style="background: linear-gradient(to right, #4a7c59, #1a2333);"></div>
+                    <div class="top-game-info">
+                        <h3>Schedule</h3>
+                        <div class="top-game-meta">
+                            <span class="top-game-category">Simulación, Estrategia</span>
+                            <span class="downloads-count"><i class="fas fa-download"></i> 12,632</span>
+                        </div>
+                    </div>
+                    <a href="game.html?id=schedule" class="btn-download">Descargar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sugerencias Section -->
+    <section id="sugerencias" class="section-content">
+        <div class="container">
+            <h2 class="section-title">Sugerencias</h2>
+            <div class="suggestions-content">
+                <p class="suggestions-intro">¿Tienes algún juego que te gustaría ver en Bit a Bit? ¿Encontraste algún problema con una descarga? Envíanos tus comentarios y sugerencias.</p>
+                
+                <form class="suggestions-form">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="suggestion-type">Tipo de sugerencia:</label>
+                        <select id="suggestion-type" name="suggestion-type" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="game-request">Solicitud de juego</option>
+                            <option value="bug-report">Reporte de error</option>
+                            <option value="feature-request">Solicitud de función</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Detalla tu sugerencia aquí..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Enviar Sugerencia</button>
+                    <div class="submit-loading" style="display: none;">Enviando sugerencia...</div>
+                </form>
+                
+                <div class="suggestions-faq">
+                    <h3>Preguntas Frecuentes</h3>
+                    <div class="faq-item">
+                        <h4>¿Cuánto tardan en añadir un juego solicitado?</h4>
+                        <p>Revisamos las solicitudes semanalmente. Si el juego es popular y está disponible, intentamos añadirlo en un plazo de 1-2 semanas.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>¿Cómo reporto un enlace roto?</h4>
+                        <p>Utiliza el formulario de sugerencias seleccionando "Reporte de error" e indica el nombre del juego y el problema específico con el enlace.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>¿Puedo solicitar un juego recién lanzado?</h4>
+                        <p>Sí, aunque los juegos muy recientes pueden tardar más en estar disponibles debido a restricciones de distribución.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/Bit_a_Bit_logo_no_background.png" alt="Bit a Bit Logo" class="footer-logo-img">
+                    <p>Tu portal premium de descargas de juegos</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Categorías</a></li>
+                        <li><a href="#">Novedades</a></li>
+                        <li><a href="#">Top Descargas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-categories">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="#">Acción</a></li>
+                        <li><a href="#">Aventura</a></li>
+                        <li><a href="#">RPG</a></li>
+                        <li><a href="#">Estrategia</a></li>
+                        <li><a href="#">Deportes</a></li>
+                        <li><a href="#">Simulación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bit a Bit. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

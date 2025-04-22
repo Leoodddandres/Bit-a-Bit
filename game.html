@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego - Bit a Bit</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="game-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/Bit_a_Bit_logo_no_background.png" alt="Bit a Bit Logo" class="main-logo">
+                <p class="tagline">Tu portal premium de descargas de juegos</p>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html#inicio" class="menu-link">Inicio</a></li>
+                    <li class="has-submenu">
+                        <a href="index.html#categorias" class="menu-link">Categorías <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="index.html#categorias-accion" data-filter="action">Acción</a></li>
+                            <li><a href="index.html#categorias-aventura" data-filter="adventure">Aventura</a></li>
+                            <li><a href="index.html#categorias-rpg" data-filter="rpg">RPG</a></li>
+                            <li><a href="index.html#categorias-estrategia" data-filter="strategy">Estrategia</a></li>
+                            <li><a href="index.html#categorias-deportes" data-filter="sports">Deportes</a></li>
+                            <li><a href="index.html#categorias-simulacion" data-filter="simulation">Simulación</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#novedades" class="menu-link">Novedades</a></li>
+                    <li><a href="index.html#top-descargas" class="menu-link">Top Descargas</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar juegos...">
+                <button><i class="fas fa-search"></i></button>
+                <div class="search-results" id="search-results">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="game-hero">
+        <div class="game-hero-bg" id="game-hero-bg"></div>
+        <div class="container">
+            <div class="game-hero-content">
+                <h1 id="game-title">Título del Juego</h1>
+                <div class="game-meta">
+                    <span class="game-category" id="game-category">Categoría</span>
+                    <span class="game-rating" id="game-rating"><i class="fas fa-star"></i> 0.0</span>
+                    <span class="game-release" id="game-release">Año</span>
+                </div>
+                <div class="game-actions">
+                    <a href="#download" class="btn-download">Descargar Ahora</a>
+                    <button class="btn-favorite"><i class="far fa-heart"></i> Agregar a favoritos</button>
+                    <button class="btn-share"><i class="fas fa-share-alt"></i> Compartir</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="game-content">
+        <div class="container">
+            <div class="game-content-wrapper">
+                <div class="game-main">
+                    <div class="game-tabs">
+                        <button class="tab-btn active" data-tab="description">Descripción</button>
+                        <button class="tab-btn" data-tab="screenshots">Capturas de Pantalla</button>
+                        <button class="tab-btn" data-tab="requirements">Requisitos</button>
+                        <button class="tab-btn" data-tab="reviews">Reseñas</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="description">
+                        <div class="game-description">
+                            <h2>Acerca del Juego</h2>
+                            <p id="game-description-text">Cargando descripción...</p>
+                        </div>
+                        <div class="game-features">
+                            <h3>Características</h3>
+                            <ul id="game-features-list">
+                                <li>Cargando características...</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="screenshots">
+                        <h2>Capturas de Pantalla</h2>
+                        <div class="screenshots-grid" id="screenshots-grid">
+                            <div class="screenshot placeholder"></div>
+                            <div class="screenshot placeholder"></div>
+                            <div class="screenshot placeholder"></div>
+                            <div class="screenshot placeholder"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="requirements">
+                        <h2>Requisitos del Sistema</h2>
+                        <div class="requirements-wrapper">
+                            <div class="requirements-box">
+                                <h3>Mínimos</h3>
+                                <ul id="min-requirements">
+                                    <li><strong>Sistema Operativo:</strong> <span id="min-os">Windows 7 o posterior</span></li>
+                                    <li><strong>Procesador:</strong> <span id="min-cpu">Intel Core i3 / AMD Ryzen 3</span></li>
+                                    <li><strong>Memoria:</strong> <span id="min-ram">4 GB RAM</span></li>
+                                    <li><strong>Tarjeta Gráfica:</strong> <span id="min-gpu">NVIDIA GeForce GTX 760 / AMD Radeon HD 7950</span></li>
+                                    <li><strong>DirectX:</strong> <span id="min-directx">Versión 11</span></li>
+                                    <li><strong>Almacenamiento:</strong> <span id="min-storage">2 GB de espacio disponible</span></li>
+                                </ul>
+                            </div>
+                            <div class="requirements-box">
+                                <h3>Recomendados</h3>
+                                <ul id="rec-requirements">
+                                    <li><strong>Sistema Operativo:</strong> <span id="rec-os">Windows 10 64-bit</span></li>
+                                    <li><strong>Procesador:</strong> <span id="rec-cpu">Intel Core i5 / AMD Ryzen 5</span></li>
+                                    <li><strong>Memoria:</strong> <span id="rec-ram">8 GB RAM</span></li>
+                                    <li><strong>Tarjeta Gráfica:</strong> <span id="rec-gpu">NVIDIA GeForce GTX 1050 / AMD Radeon RX 560</span></li>
+                                    <li><strong>DirectX:</strong> <span id="rec-directx">Versión 12</span></li>
+                                    <li><strong>Almacenamiento:</strong> <span id="rec-storage">2 GB SSD</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="reviews">
+                        <h2>Reseñas de Usuarios</h2>
+                        <div class="reviews-summary">
+                            <div class="overall-rating">
+                                <span class="rating-number">4.6</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>Basado en 125 reseñas</span>
+                            </div>
+                            <div class="rating-bars">
+                                <div class="rating-bar">
+                                    <span>5 Estrellas</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 65%"></div>
+                                    </div>
+                                    <span>65%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>4 Estrellas</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 25%"></div>
+                                    </div>
+                                    <span>25%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>3 Estrellas</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 7%"></div>
+                                    </div>
+                                    <span>7%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>2 Estrellas</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 2%"></div>
+                                    </div>
+                                    <span>2%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>1 Estrella</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 1%"></div>
+                                    </div>
+                                    <span>1%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-reviews" id="user-reviews">
+                            <div class="review">
+                                <div class="review-header">
+                                    <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='50' height='50'%3E%3Ccircle cx='50' cy='50' r='50' fill='%233a0ca3'/%3E%3Cpath d='M30 35h40v5H30zM30 45h40v5H30zM30 55h40v5H30z' fill='%23f8f9fa'/%3E%3C/svg%3E" alt="Usuario" class="user-avatar">
+                                    <div>
+                                        <h4>Manuel García</h4>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="review-date">15 de abril, 2023</span>
+                                    </div>
+                                </div>
+                                <p class="review-text">¡Excelente juego! Uno de los mejores que he jugado en mucho tiempo. La historia es increíble y los gráficos son impresionantes. Lo recomiendo a todo el mundo.</p>
+                            </div>
+                            <div class="review">
+                                <div class="review-header">
+                                    <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='50' height='50'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23f72585'/%3E%3Cpath d='M30 35h40v5H30zM30 45h40v5H30zM30 55h40v5H30z' fill='%23f8f9fa'/%3E%3C/svg%3E" alt="Usuario" class="user-avatar">
+                                    <div>
+                                        <h4>Sofía Torres</h4>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="review-date">3 de marzo, 2023</span>
+                                    </div>
+                                </div>
+                                <p class="review-text">Muy buen juego aunque tiene algunos pequeños bugs. La jugabilidad es excelente y me mantuvo enganchado durante horas. Definitivamente vale la pena descargarlo.</p>
+                            </div>
+                            <button class="btn-load-more">Cargar más reseñas</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-sidebar">
+                    <div class="sidebar-box download-box" id="download">
+                        <h3>Descargar Juego</h3>
+                        <p>Versión: <span id="game-version">1.0</span></p>
+                        <p>Tamaño: <span id="game-size">0 MB</span></p>
+                        <p>Actualizado: <span id="game-updated">1 Ene 2023</span></p>
+                        <a href="#" class="btn-download btn-full">Descargar Juego</a>
+                        <a href="#" class="btn-download btn-full" style="background-color: var(--primary-color);">Archivos Para Jugar Online</a>
+                    </div>
+                    
+                    <div class="sidebar-box info-box">
+                        <h3>Información</h3>
+                        <ul>
+                            <li><i class="fas fa-gamepad"></i> <strong>Desarrollador:</strong> <span id="game-developer">Desconocido</span></li>
+                            <li><i class="fas fa-building"></i> <strong>Editor:</strong> <span id="game-publisher">Desconocido</span></li>
+                            <li><i class="fas fa-calendar-alt"></i> <strong>Fecha de lanzamiento:</strong> <span id="game-release-date">Desconocido</span></li>
+                            <li><i class="fas fa-users"></i> <strong>Modo:</strong> <span id="game-mode">Un jugador</span></li>
+                            <li><i class="fas fa-language"></i> <strong>Idioma:</strong> <span id="game-language">Español</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-box related-box">
+                        <h3>Juegos Relacionados</h3>
+                        <div class="related-games">
+                            <a href="#" class="related-game">
+                                <div class="related-thumb" id="related-1"></div>
+                                <span>Juego Relacionado 1</span>
+                            </a>
+                            <a href="#" class="related-game">
+                                <div class="related-thumb" id="related-2"></div>
+                                <span>Juego Relacionado 2</span>
+                            </a>
+                            <a href="#" class="related-game">
+                                <div class="related-thumb" id="related-3"></div>
+                                <span>Juego Relacionado 3</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/Bit_a_Bit_logo_no_background.png" alt="Bit a Bit Logo" class="footer-logo-img">
+                    <p>Tu portal premium de descargas de juegos</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="index.html#inicio">Inicio</a></li>
+                        <li><a href="index.html#categorias">Categorías</a></li>
+                        <li><a href="index.html#novedades">Novedades</a></li>
+                        <li><a href="index.html#top-descargas">Top Descargas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-categories">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="index.html#categorias">Acción</a></li>
+                        <li><a href="index.html#categorias">Aventura</a></li>
+                        <li><a href="index.html#categorias">RPG</a></li>
+                        <li><a href="index.html#categorias">Estrategia</a></li>
+                        <li><a href="index.html#categorias">Deportes</a></li>
+                        <li><a href="index.html#categorias">Simulación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bit a Bit. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="game-script.js"></script>
+</body>
+</html>
